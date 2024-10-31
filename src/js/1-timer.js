@@ -12,7 +12,7 @@ const secondsValue = document.querySelector('[data-seconds]');
 
 btnStart.disabled = true;
 let userSelectedDate;
-let timeInerval;
+let timeInterval;
 
 const options = {
   enableTime: true,
@@ -50,7 +50,7 @@ function startTimer() {
     const msDifference = userSelectedDate - currentTime;
 
     if (msDifference <= 0) {
-      clearInterval(timeInerval);
+      clearInterval(timeInterval);
       inputId.disabled = false;
       return;
     }
